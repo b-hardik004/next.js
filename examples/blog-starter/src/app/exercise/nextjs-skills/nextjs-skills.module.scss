@@ -1,0 +1,24 @@
+.blog-img {
+    margin: auto;
+}
+
+.img-shuffle-btn {
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.img-block img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}

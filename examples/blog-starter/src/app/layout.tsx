@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
+import NavigationBar from "./exercise/navigation-bar/navigatiob-bar";
+import ApiBlogPage from "./exercise/api-blog/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,6 +49,7 @@ export default function RootLayout({
           color="#000000"
         />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <meta charSet="utf-8" name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="msapplication-config"
@@ -56,7 +59,9 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={inter.className}>
+        <NavigationBar />
         <div className="min-h-screen">{children}</div>
+        
         <Footer />
       </body>
     </html>

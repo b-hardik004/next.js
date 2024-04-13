@@ -1,5 +1,6 @@
 import { Post } from "@/interfaces/post";
 import { PostPreview } from "./post-preview";
+import ApiBlogPage from "../exercise/api-blog/page";
 
 type Props = {
   posts: Post[];
@@ -24,6 +25,7 @@ export function MoreStories({ posts }: Props) {
           />
         ))}
       </div>
+      <ApiBlogPage />
     </section>
   );
 }
