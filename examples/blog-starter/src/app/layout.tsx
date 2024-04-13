@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "./exercise/navigation-bar/navigatiob-bar";
 import ApiBlogPage from "./exercise/api-blog/page";
+import { Providers } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,8 +61,11 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <NavigationBar />
-        <div className="min-h-screen">{children}</div>
-        
+        <div className="min-h-screen">
+          <Providers>
+            {children}
+          </Providers>
+        </div>
         <Footer />
       </body>
     </html>
